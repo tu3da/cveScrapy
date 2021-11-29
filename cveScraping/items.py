@@ -8,5 +8,14 @@ import scrapy
 
 class CvescrapingItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    # site URL
+    url = scrapy.Field()
+    # Vulnerability Name
+    # Title = scrapy.Field()
+    # source site. ExploitDB, vulners or vulmon
+    site = "Vulmon"
+    # tags that include CVE, CPE, and so on
+    tags = scrapy.Field()
+    # feature extracted from html
+    VulnSummary = scrapy.Field()
+    
