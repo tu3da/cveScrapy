@@ -9,7 +9,7 @@ import time
 class VulmonspiderSpider(scrapy.Spider):
     name = 'vulmonspider'
     allowed_domains = ['vulmon.com']
-    start_urls = ['https://vulmon.com/searchpage?q=%2A&sortby=bydate&page={0}'.format(i) for i in range(1,2)]
+    start_urls = ['https://vulmon.com/searchpage?q=%2A&sortby=bydate&page={0}'.format(i) for i in range(1,256)]
         
     def start_requests(self):
         for i in range(len(self.start_urls)):         
